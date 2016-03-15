@@ -1,8 +1,23 @@
+.container {
+    background-color: #dedede;
+}
+
 .header {
     background-color: #333;
+    margin: 0 2px auto 0;
+    width: 1280px;
+    height: 60px;
 }
 
 .logo {
     margin-left: 40px;
     margin-top: 9px;
+}
+
+.nav {
+    width: 350;
+    margin-right: 0;
+}
+
+.nav li {
 }

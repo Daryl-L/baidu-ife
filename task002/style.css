@@ -1,5 +1,6 @@
 .container {
     background-color: #dedede;
+    margin: 0;
 }
 
 .header {
@@ -15,9 +16,129 @@
 }
 
 .nav {
-    width: 350;
-    margin-right: 0;
+    width: 320px;
+    height: 30px;
+    float: right;
 }
 
 .nav li {
+    display: inline;
+    margin-left: 15px;
+    list-style-position: inside;
+}
+
+.nav li a:link {
+    font-family: SimHei;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: #ababab;
+    text-decoration: none;
+}
+
+.article {
+    background-color: #fff;
+    padding: 40px 20px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right:20px;
+    border: 1px solid #cdcdcd;
+    box-shadow: 2px 2px 1px #848484;
+}
+
+.first_title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: SimHei;
+}
+
+.second_title {
+    font-size: 15px;
+    font-family: SimHei;
+    font-weight: 500;
+    color: #606060;
+}
+
+.article_time {
+    font-size: 5px;
+    font-weight: 500;
+    font-family: SimHei;
+    color: #606060;
+}
+
+.article_detail {
+    text-indent: 2em;
+    line-height: 25px;
+    font-family: SimHei;
+}
+
+#second_article li {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.nice_pic {
+    height: 112px;
+    width: 123px;
+    border: 1px solid #cbcbcb;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.pic_detail {
+    text-align: center;
+    padding: 0;
+}
+
+.pic_detail p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.pic {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.pic img {
+    height: 81px;
+}
+
+.rating li {
+    margin-top: 10px;
+}
+
+table {
+    border-collapse:collapse;
+    border:solid #e3e3e3 1px;
+    border-width: 1px 1px 1px 1px;
+    width: 1200px;
+}
+
+td {
+    height: 25px;
+    font-size: 10px;
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+}
+
+th { 
+    background-color: #333;
+    color: #fff;
+    height: 25px;
+    font-size: 10px;
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+}
+
+.last {
+    background-color: #ccc;
 }

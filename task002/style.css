@@ -42,7 +42,7 @@
 .article {
     background-color: #fff;
     padding: 40px 20px; 
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
     margin-right:20px;
     border: 1px solid #cdcdcd;
@@ -141,4 +141,67 @@ th {
 
 .last {
     background-color: #ccc;
+}
+
+.sidebar {
+    border-left: 3px solid #cdcdcd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+label {
+    font-size: 10px;
+    margin-right: 20px;
+    text-align: right;
+    width: 85px;
+    display: inline-block;
+}
+
+.action {
+    margin-left: 105px;
+    font-size: 10px;
+    color: #969696;
+}
+
+.form_group {
+    margin-left: 280px;
+    margin-top: 10px;
+}
+
+.form_group textarea {
+    margin-right: 0;
+    width: 800px;
+    height: 100px;
+}
+
+.form_group #self_detail {
+    vertical-align: top;
+}
+
+button {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background: #35c;
+    width: 1198px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+button span {
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer {
+    text-align: center;
+    background-color: #000;
+    height: 50px;
+    width: 1280px;
+    color: #fff;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 10px;
 }

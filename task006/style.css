@@ -1,0 +1,58 @@
+html,body {
+    margin: 0;
+}
+
+.container {
+    height: 1386px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    position: relative;
+    border-bottom: 2px solid #938e8c;
+    height: 61px;
+    width: 892px;
+}
+
+.logo {
+    float: left;
+    position: relative;
+    background-color: #d45d5c;
+    width: 110px;
+    height: 61px;
+}
+
+.logo span {
+    position: absolute;
+    vertical-align: bottom;
+    font-family: SimHei;
+    font-size: 12px;
+    color: #fff;
+    left: 7px;
+    bottom: 6px;
+    margin-top: auto;
+}
+
+.date {
+    position: absolute;
+    bottom: 6px;
+    right: 1px;
+    font-size: 12px;
+    color: #d45d5c;
+}
+
+.main {
+    height: 1263px;
+}
+
+.footer {
+    position: relative;
+    border-top: 1px solid #938e8c;
+    height: 59px;
+}
+
+.footer .date {
+    top: 3px;
+}

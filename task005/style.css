@@ -10,6 +10,10 @@
     height: 60px;
 }
 
+.main {
+    width: 70%;
+}
+
 .logo {
     margin-left: 40px;
     margin-top: 9px;

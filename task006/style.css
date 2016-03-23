@@ -48,6 +48,10 @@ html,body {
     height: 1263px;
 }
 
+.top {
+    overflow: hidden;
+}
+
 .left-big {
     float: left;
     margin-left: -1px;
@@ -87,7 +91,7 @@ html,body {
 }
 
 .about-technology {
-    font-family: "Microsoft Yahei";
+    font-family: "Microsoft YaHei";
     font-size: 24px;
     text-decoration: underline;
     margin: 0;
@@ -104,7 +108,7 @@ html,body {
 }
 
 .num1 {
-    font-family: "Microsoft Yahei";
+    font-family: "Microsoft YaHei";
     font-size: 116px;
     color: #75b86b;
     margin: 0;
@@ -145,6 +149,43 @@ html,body {
     color: #231815;
     opacity: 0.4;
     font-size: 12px;
+}
+
+.middle {
+    margin-top: 41px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 167px;
+}
+
+.what {
+    width: 228px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+    float: left;
+}
+
+.what-title {
+    color: #418c59;
+    text-decoration: underline;
+    font-weight: 900;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+}
+
+.w-article {
+    color: #231815;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    line-height: 16px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.when {
+    width: 205px;
+    float: left;
 }
 
 .footer {

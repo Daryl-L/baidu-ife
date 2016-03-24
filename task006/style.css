@@ -225,6 +225,65 @@ html,body {
     opacity: 0.7;
 }
 
+.bottom {
+    margin: 0;
+    margin-top: 74px;
+}
+
+.bottom-left{
+    float: left;
+    width: 415px;
+}
+
+.bottom-left-top {
+    border-bottom: 2px solid #11456b;
+    height: 152px;
+    width: 415px;
+}
+
+.the {
+    margin-left: 8px;
+    margin-right: 40px;
+    font-style: italic;
+    font-family: SimHei;
+    font-size: 72px;
+    font-weight: 900;
+    color: #f5e327;
+}
+
+.tof {
+    font-size: 32px;
+    font-family: "黑体";
+    font-weight: 900;
+    color: #11456b;
+}
+
+.font {
+    font-family: SimHei;
+    font-size: 33px;
+    color: #11456b;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.bottom-left-bottom {
+    margin-top: 20px;
+}
+
+.qian {
+    font-size: 70px;
+    font-weight: 900;
+    font-family: "Microsoft YaHei";
+    color: #f5e327;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.bottom-right {
+    float: right;
+}
+
 .footer {
     position: relative;
     border-top: 1px solid #938e8c;

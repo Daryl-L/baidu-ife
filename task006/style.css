@@ -284,6 +284,26 @@ html,body {
     float: right;
 }
 
+.left-bottom-pic {
+    float: right;
+    vertical-align: bottom;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 12px;
+}
+
+.qianduan {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "宋体";
+    color: #767777;
+}
+
+.suojin {
+    text-indent: 2em;
+}
+
 .footer {
     position: relative;
     border-top: 1px solid #938e8c;

@@ -280,10 +280,6 @@ html,body {
     float: left;
 }
 
-.bottom-right {
-    float: right;
-}
-
 .left-bottom-pic {
     float: right;
     vertical-align: bottom;
@@ -302,6 +298,35 @@ html,body {
 
 .suojin {
     text-indent: 2em;
+}
+
+.bottom-right {
+    float: right;
+    margin-left: 5px;
+    width: 458px;
+    position: relative;
+}
+
+.right_bottom_top_shadding {
+    width: 458px;
+    height: 61px;
+    background-color: #040000;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.4;
+}
+
+.qianduanjishu {
+    border-left: 3px solid #72b16a;
+    height: 44px;
+    margin-top: 9px;
+    margin-left: 40px;
+    opacity: 2.5;
+}
+
+.qianduanjishu-big {
+    opacity: 2.5;
+    color: #fff;
 }
 
 .footer {

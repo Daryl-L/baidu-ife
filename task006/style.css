@@ -307,13 +307,16 @@ html,body {
     position: relative;
 }
 
+.bottom-right-top {
+    position: relative;
+}
+
 .right_bottom_top_shadding {
     width: 458px;
     height: 61px;
-    background-color: #040000;
+    background-color: rgba(4, 0, 0, 0.4);
     position: absolute;
     bottom: 0;
-    opacity: 0.4;
 }
 
 .qianduanjishu {
@@ -325,7 +328,144 @@ html,body {
 }
 
 .qianduanjishu-big {
-    opacity: 2.5;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Microsoft YaHei";
+    float: left;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: 9px;
+}
+
+.qianduanjishu-small {
+    float: left;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    font-style: italic;
+    color: #72b16a;
+    margin-top: 23px;
+    margin-left: 5px;
+    letter-spacing: 1.4em;
+}
+
+.bottom-right-bottom {
+    background-color: #eeedd6;
+    margin: 27px 0 0 0;
+    height: 318px;
+    position: relative;
+}
+
+.bottom-right-bottom-in {
+    position: absolute;
+    width: 260px;
+    height: 155px;
+    background-color: #d45d5c;
+    bottom: 1px;
+    left: 0;
+}
+
+.bottom-right-bottom ul {
+    list-style: square inside url('list.png');
+    position: absolute;
+    margin-top: 20px;
+}
+
+.bottom-right-bottom ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #5a5b5b;
+    font-size: 16px;
+    font-family: SimSun;
+}
+
+.bottom-right-bottom ul li span {
+    font-size: 12px;
+    font-family: SimSun;
+    font-style: italic;
+    text-align: right;
+    color: #5a5b5b;
+}
+
+.helloworld {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 155px;
+}
+
+.yinhao {
+    font-size: 72px;
+    font-family: SimHei;
+    color: #d45d5c;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -25px;
+    float: left;
+}
+
+.helloworld-detail {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: -57px;
+    margin-left: 20px;
+    text-indent: 2em;
+    font-size: 14px;
+    color: #5a5b5b;
+    line-height: 16px;
+    font-family: SimHei;
+    font-style: italic;
+}
+
+.yinhao2 {
+    font-size: 72px;
+    font-family: SimHei;
+    color: #d45d5c;
+    margin-top: -30px;
+    margin-bottom: 0;
+    margin-left: 100px;
+    float: left;
+}
+
+.zero {
+    border-right: 2px solid #fff;
+    font-size: 110px;
+    width: 65px;
+    height: 86px;
+    position: relative;
+    color: #fff;
+    margin-top: 35px;
+    margin-left: 5px;
+    float: left;
+}
+
+.zero p {
+    margin: 0;
+    position: absolute;
+    top: -5px;
+}
+
+.num {
+    float: left;
+    margin-top: 35px;
+    margin-left: 5px;
+    width: 100px;
+}
+
+.num-detail {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: SimHei;
+    font-style: italic;
+    color: #fff;
+}
+
+.hello {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: SimHei;
+    font-style: italic;
     color: #fff;
 }
 

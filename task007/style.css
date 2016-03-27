@@ -2,3 +2,64 @@ html body {
     margin: 0;
     padding: 0;
 }
+
+.header {
+    margin: 0;
+    height: 53px;
+    background-color: #fff;
+}
+
+.box0 {
+    margin: 0;
+    height: 691px;
+}
+
+.box1 {
+    margin: 0;
+    height: 249px;
+    background-color: #fff;
+}
+
+.box2 {
+    margin: 0;
+    height: 360px;
+    background-color: #ededed;
+}
+
+.box3 {
+    margin: 0;
+    height: 341px;
+}
+
+.box4 {
+    margin: 0;
+    height: 604px;
+    background-color: #f7f7f7;
+}
+
+.box5 {
+    margin: 0;
+    height: 566px;
+}
+
+.box6 {
+    margin: 0;
+    height: 521px;
+}
+
+.box7 {
+    margin: 0;
+    height: 749px;
+}
+
+.box8 {
+    margin: 0;
+    height: 358px;
+    background-color: #32353e;
+}
+
+.footer {
+    margin: 0;
+    height: 63px;
+    background-color: #2f3039;
+}

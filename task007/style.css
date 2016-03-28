@@ -9,9 +9,82 @@ html body {
     background-color: #fff;
 }
 
+.logo {
+    float: left;
+    margin-top: 13px;
+    margin-left: 59px;
+}
+
+.logo img {
+    float: left;
+}
+
+.logo .logoTitle {
+    float: left;
+    margin-left: 11px;
+    font-family: SimHei;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.tab {
+    float: right;
+    margin-right: 67px;
+}
+
+.tab ul {
+    float: left;
+    padding-left: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
+    height: 38px;
+}
+
+.tab ul li {
+    float: left;
+    width: 56px;
+    height: 35px;
+    text-align: center;
+    list-style: none;
+    margin-left: 50px;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #000;
+}
+
+.tab ul li#selected {
+    color: #e74f4d;
+    border-bottom: 3px solid #e74f4d;
+}
+
+.login {
+    float: left;
+    margin-top: 15px;
+    margin-left: 32px;
+}
+
+.login img {
+    float: left;
+    margin-right: 7px;
+}
+
+.login-detail {
+    float: left;
+    color: #e74f4d;
+}
+
 .box0 {
     margin: 0;
     height: 691px;
+    background-image: url(bg1.png);
+    overflow: hidden;
+}
+
+.time-of-new-life {
+    color: #fff;
+    font-size: 60px;
+    margin-left: 117px;
+    margin-top: 245px;
 }
 
 .box1 {

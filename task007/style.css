@@ -87,6 +87,30 @@ html body {
     margin-top: 245px;
 }
 
+.time-of-new-life-detail {
+    font-size: 21px;
+    color: #fff;
+    margin-left: 117px;
+    width: 300px;
+    font-family: "Microsoft YaHei";
+    line-height: 31px;
+}
+
+.start:link,.start:visited,.start:hover,.start:active,.start {
+    width: 132px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Microsoft YaHei";
+    background-color: #e74f4d;
+    padding: 19px 99px;
+    box-shadow: 1px 1px 1px rgba(231, 79, 77, 0.8);
+    margin-left: 117px;
+    margin-top: 60px;
+    display: block;
+}
+
 .box1 {
     margin: 0;
     height: 249px;

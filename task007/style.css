@@ -153,10 +153,27 @@ html body {
     background-color: #ededed;
 }
 
+.box2 img {
+    margin-top: 89px;
+    margin-left: 595px;
+}
+
+.box2 p {
+    color: #8f908f;
+    font-size: 45px;
+    font-family: SimHei;
+    margin-top: 51px;
+    margin-left: 300px;
+}
+
 .box3 {
     margin: 0;
     height: 341px;
+    background-color: rgba(170, 52, 50, 0.2);
+    background-image: url(bg2.png);
 }
+
+
 
 .box4 {
     margin: 0;

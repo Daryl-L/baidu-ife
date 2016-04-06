@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>task014</title>
+</head>
+<body>
+    <h3>污染列表</h3>
+    <ul id="aqi-list"></ul>
+</body>
+<script type="text/javascript">
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+    
+    (function() {
+        var aqiNew = [];
+        for (let i = 0; i < aqiData.length; i++) {
+            if (aqiData[i][1] > 60) {
+                aqiNew.push(aqiData[i]);
+            }
+        }
+        var tmp;
+        for (let i = 0; i < aqiNew.length; i++) {
+            for (let j = 0; j < i; j++) {
+                if (aqiNew[j][1] < aqiNew[i][1]) {
+                    tmp = aqiNew[i];
+                    aqiNew[i] = aqiNew[j];
+                    aqiNew[j] = tmp;
+                }
+            }
+        }
+        
+        for (let i = 0; i < aqiNew.length; i++) {
+            var ul = document.getElementById("aqi-list");
+            var li = document.createElement("li");
+            
+            li.innerHTML = "第" + (i + 1) + "名：" + aqiNew[i][0] + "，" + aqiNew[i][1];
+            ul.appendChild(li);
+        }
+    })();
+</script>
+</html>

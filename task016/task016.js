@@ -23,6 +23,13 @@ function addAqiData() {
  */
 function renderAqiList() {
     var table = document.getElementById("aqi-table");
-    var tr = createElement("tr");
-    
+    table.innerHTML = null;
+    var tr = document.createElement("tr");
+    var td = createElement("td");
+    td.innerHTML = "城市";
+    tr.appendChild(td);
+    td.innerHTML("空气质量");
+    tr.appendChild(td);
+    td.innerHTML("操作");
+    tr.appendChild(td);
 }

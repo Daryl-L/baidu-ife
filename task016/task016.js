@@ -23,13 +23,10 @@ function addAqiData() {
  */
 function renderAqiList() {
     var table = document.getElementById("aqi-table");
-    table.innerHTML = null;
-    var tr = document.createElement("tr");
-    var td = createElement("td");
-    td.innerHTML = "城市";
-    tr.appendChild(td);
-    td.innerHTML("空气质量");
-    tr.appendChild(td);
-    td.innerHTML("操作");
-    tr.appendChild(td);
+    table.innerHTML = "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
+    for (let key in aqiData) {
+        let tr = document.createElement("tr");
+        tr.innerHTML = "<td>" + key + "</td><td>" + aqiData[key] + "</td><td><button id=\"del-btn\">删除</button></td>";
+        table.appendChild(tr);
+    }
 }

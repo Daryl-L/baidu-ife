@@ -29,15 +29,31 @@ function renderAqiList() {
         tr.innerHTML = "<td>" + key + "</td><td>" + aqiData[key] + "</td><td><button class=\"del-btn\">删除</button></td>";
         table.appendChild(tr);
     }
+    var delBtn = document.getElementsByClassName("del-btn");
+    for (let i = 0; i < delBtn.length; i++) {
+        delBtn[i].addEventListener("click", delBtnHandle);
+    }
 }
-    
+
+/**
+ * 点击add-btn时的处理逻辑
+ * 获取用户输入，更新数据，并进行页面呈现的更新
+ */
 function addBtnHandle() {
     addAqiData();
     renderAqiList();
 }
 
-function delBtnHandle() {
-    
+/**
+ * 点击各个删除按钮的时候的处理逻辑
+ * 获取哪个城市数据被删，删除数据，更新表格显示
+ */
+function delBtnHandle(e) {
+    var aqiTable = document.getElementById("aqi-table");
+    var tr = e.target.parentElement.parentElement;
+    var td = tr.getElementsByTagName("td");
+    delete aqiData[td[0].innerHTML];
+    aqiTable.removeChild(tr);
 }
     
 (function () {

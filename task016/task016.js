@@ -13,8 +13,8 @@ var aqiData = {};
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-    var city = document.getElementById("aqi-city-input");
-    var aqi = document.getElementById("aqi-value-input");
+    var city = document.getElementById("aqi-city-input").value;
+    var aqi = document.getElementById("aqi-value-input").value;
     aqiData[city] = aqi;
 }
 
@@ -26,7 +26,21 @@ function renderAqiList() {
     table.innerHTML = "<tr><td>城市</td><td>空气质量</td><td>操作</td></tr>";
     for (let key in aqiData) {
         let tr = document.createElement("tr");
-        tr.innerHTML = "<td>" + key + "</td><td>" + aqiData[key] + "</td><td><button id=\"del-btn\">删除</button></td>";
+        tr.innerHTML = "<td>" + key + "</td><td>" + aqiData[key] + "</td><td><button class=\"del-btn\">删除</button></td>";
         table.appendChild(tr);
     }
 }
+    
+function addBtnHandle() {
+    addAqiData();
+    renderAqiList();
+}
+
+function delBtnHandle() {
+    
+}
+    
+(function () {
+    var addBtn = document.getElementById("add-btn");
+    addBtn.addEventListener("click", addBtnHandle);
+})();

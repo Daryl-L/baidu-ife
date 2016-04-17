@@ -46,29 +46,28 @@ var pageState = {
  */
 function renderChart() {
     
-    chartData = aqiSourceData["北京"];
 }
 
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
 function graTimeChange() {
-  // 确定是否选项发生了变化 
+    // 确定是否选项发生了变化 
 
-  // 设置对应数据
+    // 设置对应数据
 
-  // 调用图表渲染函数
+    // 调用图表渲染函数
 }
 
 /**
  * select发生变化时的处理函数
  */
 function citySelectChange() {
-  // 确定是否选项发生了变化 
+    // 确定是否选项发生了变化 
 
-  // 设置对应数据
-
-  // 调用图表渲染函数
+    // 设置对应数据
+    
+    // 调用图表渲染函数
 }
 
 /**
@@ -82,9 +81,9 @@ function initGraTimeForm() {
  * 初始化城市Select下拉选择框中的选项
  */
 function initCitySelector() {
-  // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
+    // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
 
-  // 给select设置事件，当选项发生变化时调用函数citySelectChange
+    // 给select设置事件，当选项发生变化时调用函数citySelectChange
 
 }
 
@@ -92,10 +91,38 @@ function initCitySelector() {
  * 初始化图表需要的数据格式
  */
 function initAqiChartData() {
-  // 将原始的源数据处理成图表需要的数据格式
-  // 处理好的数据存到 chartData 中
+    var city = {
+        "day": {},
+        "week": {},
+        "month": {}
+    };
+    for (var key in aqiSourceData) {
+        city.day = aqiSourceData[key];
+        var day = 0;
+        var aqiSum = 0;
+        var start;
+        var time;
+        for (time in aqiSourceData[key]) {
+            if (0 == day) {
+                start = time;
+            }
+            ++day;
+            aqiSum += aqiSourceData[key][time];
+            if (7 == day) {
+                city.week[start + "~" + time] = Math.round(aqiSum / day);
+                day = 0;
+                aqiSum = 0;
+            }
+        }
+        if (0 != day) {
+            city.week[start + "~" + time] = Math.round(aqiSum / day);
+        }
+        chartData[key] = city;
+    }
 }
 
 (function () {
-    renderChart();
+    initGraTimeForm()
+    initCitySelector();
+    initAqiChartData();
 })();

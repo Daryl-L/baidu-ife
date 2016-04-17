@@ -15,6 +15,9 @@ var aqiData = {};
 function addAqiData() {
     var city = document.getElementById("aqi-city-input").value;
     var aqi = document.getElementById("aqi-value-input").value;
+    if ("" == city || "" == aqi) {
+        return;
+    }
     aqiData[city] = aqi;
 }
 

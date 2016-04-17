@@ -40,3 +40,62 @@ var pageState = {
     nowSelectCity: -1,
     nowGraTime: "day"
 };
+
+/**
+ * 渲染图表
+ */
+function renderChart() {
+    
+    chartData = aqiSourceData["北京"];
+}
+
+/**
+ * 日、周、月的radio事件点击时的处理函数
+ */
+function graTimeChange() {
+  // 确定是否选项发生了变化 
+
+  // 设置对应数据
+
+  // 调用图表渲染函数
+}
+
+/**
+ * select发生变化时的处理函数
+ */
+function citySelectChange() {
+  // 确定是否选项发生了变化 
+
+  // 设置对应数据
+
+  // 调用图表渲染函数
+}
+
+/**
+ * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
+ */
+function initGraTimeForm() {
+
+}
+
+/**
+ * 初始化城市Select下拉选择框中的选项
+ */
+function initCitySelector() {
+  // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
+
+  // 给select设置事件，当选项发生变化时调用函数citySelectChange
+
+}
+
+/**
+ * 初始化图表需要的数据格式
+ */
+function initAqiChartData() {
+  // 将原始的源数据处理成图表需要的数据格式
+  // 处理好的数据存到 chartData 中
+}
+
+(function () {
+    renderChart();
+})();

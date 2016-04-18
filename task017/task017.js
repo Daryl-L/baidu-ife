@@ -91,12 +91,12 @@ function initCitySelector() {
  * 初始化图表需要的数据格式
  */
 function initAqiChartData() {
-    var city = {
-        "day": {},
-        "week": {},
-        "month": {}
-    };
     for (var key in aqiSourceData) {
+        let city = {
+            "day": {},
+            "week": {},
+            "month": {}
+        };
         city.day = aqiSourceData[key];
         var day = 0;
         var aqiSum = 0;
@@ -113,6 +113,12 @@ function initAqiChartData() {
                 day = 0;
                 aqiSum = 0;
             }
+            let datetime = new Date(time);
+            let yearMonth = datetime.getFullYear() + "-" + (datetime.getMonth() + 1);
+            if (null == city.month[yearMonth]) {
+                city.month[yearMonth] = Array();
+            }
+            city.month[yearMonth].push(aqiSourceData[key][time]);
         }
         if (0 != day) {
             city.week[start + "~" + time] = Math.round(aqiSum / day);

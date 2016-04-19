@@ -1,0 +1,50 @@
+html,body {
+    margin: 0,0,0,0;
+    padding: 0,0,0,0;
+}
+
+.aqi-chart-wrap {
+    margin-top: 10px;
+}
+
+.pillar {
+    float: left;
+    vertical-align: bottom;
+}
+
+.great {
+    background-color: rgb(5,115,0);
+    border: 1px solid rgb(99,211,92)
+}
+
+.good {
+    background-color: rgb(0,0,255);
+    border: 1px solid rgb(172,169,241)
+}
+
+.worth {
+    background-color: rgb(255,0,0);
+    border: 1px solid rgb(225,170,172)
+}
+
+.serious {
+    background-color: rgb(107,0,110);
+    border: 1px solid rgb(204,104,204)
+}
+
+.disaster {
+    background-color: rgb(0,0,0);
+    border: 1px solid rgb(50,50,50)
+}
+
+.day {
+    width: 10px;
+}
+
+.week {
+    width: 30px;
+}
+
+.month {
+    width: 60px;
+}

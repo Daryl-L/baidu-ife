@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>task017</title>
+    <link rel="stylesheet" href="task017.css" />
 </head>
 <body>
     <fieldset id="form-gra-time">
@@ -10,14 +11,10 @@
         <label>周<input name="gra-time" value="week" type="radio"" /></label>
         <label>月<input name="gra-time" value="month" type="radio" /></label>
     </fieldset>
-    
     <fieldset>
-        <select id="city-select">
-            <option>北京</option>
-        </select>
+        <select id="city-select"></select>
     </fieldset>
-    
-    <div class="aqi-chart-wrap"></div>
+    <div class="aqi-chart-wrap" id="aqi-chart-wrap"></div>
 </body>
 <script src="task017.js" type="text/javascript"></script>
 </html>

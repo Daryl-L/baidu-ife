@@ -37,26 +37,54 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-    nowSelectCity: -1,
-    nowGraTime: "day"
+    nowSelectCity: "北京",
+    nowGraTime: "week"
 };
 
 /**
  * 渲染图表
  */
 function renderChart() {
-    
+    var aqiChartWrap = document.getElementById("aqi-chart-wrap");
+    aqiChartWrap.innerHTML = null;
+    for (let date in chartData["北京"][pageState.nowGraTime]) {
+        var level;
+        if (chartData[pageState.nowSelectCity][pageState.nowGraTime][date] <= 50) {
+            level = "great ";
+        }
+        else if (chartData[pageState.nowSelectCity][pageState.nowGraTime][date] <= 100) {
+            level = "good ";
+        }
+        else if (chartData[pageState.nowSelectCity][pageState.nowGraTime][date] <= 200) {
+            level = "worth ";
+        }
+        else if (chartData[pageState.nowSelectCity][pageState.nowGraTime][date] <= 300) {
+            level = "serious ";
+        }
+        else {
+            level = "disaster ";
+        }
+        let item = document.createElement("div");
+        item.className = "pillar " + level + pageState.nowGraTime;
+        item.style = "height: " + chartData[pageState.nowSelectCity][pageState.nowGraTime][date] + "px";
+        item.title = "日期：" + date + "\naqi：" + chartData[pageState.nowSelectCity][pageState.nowGraTime][date];
+        aqiChartWrap.appendChild(item);
+    }
 }
 
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
 function graTimeChange() {
-    // 确定是否选项发生了变化 
-
-    // 设置对应数据
-
-    // 调用图表渲染函数
+    var time = document.getElementsByName("gra-time");
+    for (let key in time) {
+        if (time[key].checked) {
+            if (pageState.nowGraTime != time[key].value) {
+                pageState.nowGraTime = time[key].value;
+            }
+        }
+    }
+    renderChart();
 }
 
 /**
@@ -64,27 +92,39 @@ function graTimeChange() {
  */
 function citySelectChange() {
     // 确定是否选项发生了变化 
-
-    // 设置对应数据
-    
-    // 调用图表渲染函数
+    var citySelect = document.getElementById("city-select");
+    var cityOption = citySelect.getElementsByTagName("option");
+    for (let i = 0; i < cityOption.length; i++) {
+        if (cityOption[i].selected) {
+            if (pageState.nowSelectCity != cityOption[i].innerHTML) {
+                pageState.nowSelectCity = cityOption[i].innerHTML;
+            }
+        }
+    }
+    renderChart();
 }
 
 /**
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+    var time = document.getElementsByName("gra-time");
+    for (let i = 0; i < time.length; i++) {
+        time[i].addEventListener("click", graTimeChange);
+    }
 }
 
 /**
  * 初始化城市Select下拉选择框中的选项
  */
 function initCitySelector() {
-    // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
-
-    // 给select设置事件，当选项发生变化时调用函数citySelectChange
-
+    var citySelect = document.getElementById("city-select");
+    for (let city in aqiSourceData) {
+        let cityOption = document.createElement("option");
+        cityOption.innerHTML = city;
+        citySelect.appendChild(cityOption);
+    }
+    citySelect.addEventListener("change", citySelectChange);
 }
 
 /**

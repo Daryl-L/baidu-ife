@@ -98,6 +98,7 @@ function initAqiChartData() {
             "month": {}
         };
         city.day = aqiSourceData[key];
+        var month = {};
         var day = 0;
         var aqiSum = 0;
         var start;
@@ -116,12 +117,20 @@ function initAqiChartData() {
             let datetime = new Date(time);
             let yearMonth = datetime.getFullYear() + "-" + (datetime.getMonth() + 1);
             if (null == city.month[yearMonth]) {
-                city.month[yearMonth] = Array();
+                month[yearMonth] = Array();
             }
-            city.month[yearMonth].push(aqiSourceData[key][time]);
+            month[yearMonth].push(aqiSourceData[key][time]);
         }
         if (0 != day) {
             city.week[start + "~" + time] = Math.round(aqiSum / day);
+        }
+        for (let key in month) {
+            var monthSum = 0;
+            var i;
+            for (i = 0; i < month[key].length; i++) {
+                monthSum += month[key][i];
+            }
+            city.month[key] = monthSum / i;
         }
         chartData[key] = city;
     }

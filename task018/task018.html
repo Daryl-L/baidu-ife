@@ -56,13 +56,21 @@
     }
     
     function deleteLeft() {
+        let num = item[0];
         item.splice(0, 1);
         render();
+        if ("undefined" == num) {
+            alert(num);
+        }
     }
     
     function deleteRight() {
+        let num = item[item.length - 1];
         item.pop();
-        render()
+        render();
+        if ("undefined" == num) {
+            alert(num);
+        }
     }
     
     (function () {

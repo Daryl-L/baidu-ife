@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>task018</title>
+    <style>
+        .num {
+            padding: 10px;
+            height: 15px;
+            font-size: 15px;
+            color: rgb(255,255,255);
+            background-color: rgb(255,0,0);
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="num" />
+        <button id="left-in">左侧入</button>
+        <button id="right-in">右侧入</button>
+        <button id="left-out" style="margin-left: 20px;">左侧出</button>
+        <button id="right-out">右侧出</button>
+    </div>
+    <div id="line">
+        
+    </div>
+</body>
+<script>
+    var item = [];
+    
+    function render() {
+        var line = document.getElementById("line");
+        line.innerHTML = null;
+        for (let i = 0; i < item.length; i++) {
+            let num = document.createElement("div");
+            num.className = "num";
+            num.innerHTML = item[i];
+            line.appendChild(num);
+        }
+    }
+    
+    function addLeft() {
+        var inputNum = document.getElementById("num");
+        item.splice(0, 0, inputNum.value);
+        render();
+        inputNum.value = null;
+    }
+    
+    function addRight() {
+        var inputNum = document.getElementById("num");
+        item.push(inputNum.value);
+        render();
+        inputNum.value = null;
+    }
+    
+    function deleteLeft() {
+        item.splice(0, 1);
+        render();
+    }
+    
+    function deleteRight() {
+        item.pop();
+        render()
+    }
+    
+    (function () {
+        var leftInBtn = document.getElementById("left-in");
+        leftInBtn.addEventListener("click", addLeft);
+        var rightInBtn = document.getElementById("right-in");
+        rightInBtn.addEventListener("click", addRight);
+        var leftOutBtn = document.getElementById("left-out");
+        leftOutBtn.addEventListener("click", deleteLeft);
+        var rightOutBtn = document.getElementById("right-out");
+        rightOutBtn.addEventListener("click", deleteRight);
+    })();
+</script>
+</html>

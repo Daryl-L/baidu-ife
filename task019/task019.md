@@ -45,11 +45,8 @@ JavaScript初学者
 ### 在线学习参考资料
 
 - [JavaScript入门篇](http://www.imooc.com/view/36)
-
 - [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
-
 - [http://v.youku.com/v_show/id_XNTM1NTQxMDMy.html](http://v.youku.com/v_show/id_XNTM1NTQxMDMy.html)
-
 - [http://v.youku.com/v_show/id_XNjIwNTEzMTA0.html?from=y1.2-1-176.3.3-2.1-1-1-2-0](http://v.youku.com/v_show/id_XNjIwNTEzMTA0.html?from=y1.2-1-176.3.3-2.1-1-1-2-0)
 
 
